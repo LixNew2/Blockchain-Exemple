@@ -2,7 +2,7 @@ import random, json
 
 alphabet_lower = "abcdefghijkmnopqrstuvwxyz"
 alphabet_upper = "ABCDEFGHJKLMNPQRSTUVWXYZ"
-number = "123456789"
+number = "0123456789"
 
 def generate_wallet(lower, upper, num):
     wallet = ""
