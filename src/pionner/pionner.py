@@ -202,7 +202,6 @@ class Pionner:
         timestamp = datetime.datetime.now()
         
         #Generate hash value of block
-        print(self.merkle_root_value + self.previous_hash_value + self.proof_of_work_value + str(self.number_of_transactions) + str(timestamp))
         self.hash_value = hashlib.sha256((self.merkle_root_value + self.previous_hash_value + self.proof_of_work_value + str(self.number_of_transactions) + str(timestamp)).encode()).hexdigest()
         self.add_block()
 
