@@ -28,6 +28,7 @@ class UI(QMainWindow):
         self.send_money_btn = self.findChild(QPushButton, "pushButton_3")
         self.other_wallet_address = self.findChild(QLineEdit, "lineEdit_2")
         self.amount_to_send = self.findChild(QLineEdit, "lineEdit_3")
+        self.back_btn = self.findChild(QPushButton, "pushButton_5")
         
         #Initialisation
         self.stackwidget.setCurrentIndex(0)
@@ -35,7 +36,8 @@ class UI(QMainWindow):
         self.new_wallet_btn.clicked.connect(self.new_wallet)
         self.copy_btn.clicked.connect(self.copy_wallet_address)
         self.send_money_btn.clicked.connect(self.send_money)
-
+        self.back_btn.clicked.connect(lambda: self.stackwidget.setCurrentIndex(0))
+        
         #Show App
         self.show()
     
